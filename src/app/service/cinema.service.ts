@@ -7,7 +7,7 @@ import {Observable} from "rxjs";
 })
 export class CinemaService {
 
-  private apiKey = 'cd42fca8ef1ba1bc852d0dc870ca49ac'
+  private apiKey = '7c522565b2f68f9343176988bce19cfe'
   private ressourceUrl = `https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}`;
 
   constructor(
@@ -15,9 +15,8 @@ export class CinemaService {
   ) {
   }
 
-  getFilms(recherche: string, page: number): Observable<any> {
-    console.log('recherche : ', recherche)
-    return this.http.get<any>(`${this.ressourceUrl}&query=${recherche}&page=${page}&language=fr`);
+  getFilms(search: string, page: number): Observable<any> {
+    return this.http.get<any>(`${this.ressourceUrl}&query=${search}&page=${page}&language=fr`);
   }
 
 

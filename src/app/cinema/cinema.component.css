@@ -10,11 +10,16 @@
 .block-film {
   margin: 1em;
   padding: 1em;
-  background-color: white;
-  width: 28%;
+  width: 15%;
   border-radius: 15px;
   border: none;
-  box-shadow: 5px 5px 5px #b2b1b1;
+  text-align: center;
+}
+
+.poster {
+  height: 90%;
+  width: 100%;
+  border-radius: 5%;
 }
 
 .search-input {

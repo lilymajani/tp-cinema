@@ -1,0 +1,29 @@
+<h1>Créer un compte</h1>
+<form [formGroup]="form">
+  <div class="block">
+    <div class="block-field">
+      <label for="name">Nom</label>
+      <input type="text" id="name" formControlName="name" required>
+    </div>
+    <div class="block-field">
+      <label for="firstname">Prénom</label>
+      <input type="text" id="firstname" formControlName="firstname" required>
+    </div>
+    <div class="block-field">
+      <label for="email">Email</label>
+      <input type="text" id="email" formControlName="email" required>
+    </div>
+    <div class="block-field">
+      <label for="birthdate">Date de naissance</label>
+      <input type="date" id="birthdate" formControlName="birthdate" required>
+    </div>
+    <div class="block-field">
+      <label for="password">Mot de passe</label>
+      <input type="password" id="password" formControlName="password" required>
+    </div>
+  </div>
+  <div class="block-field">
+    <button class="validate-button" (click)="register()">S'inscrire</button>
+    <a routerLink="/login" class="redirect-field">Déjà un compte ? Se connecter</a>
+  </div>
+</form>

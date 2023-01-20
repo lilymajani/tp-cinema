@@ -1,0 +1,38 @@
+input {
+  margin-top: 1em;
+  padding: 1em;
+  width: 40em;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 5px 5px 5px #b2b1b1;
+}
+
+.block-field {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.block, h1 {
+  margin: 1em 1em 1em 23em;
+}
+
+h1 {
+  margin: 1em;
+  text-align: center;
+}
+
+.validate-button {
+  margin: 1em 1em 2em 43em;
+  padding: 1em;
+  width: 10%;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  background-color: #5476b6;
+  box-shadow: 5px 5px 5px #1e2b41;
+}
+
+.redirect-field {
+  text-align: center;
+}

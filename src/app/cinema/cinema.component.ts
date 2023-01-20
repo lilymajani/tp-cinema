@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {CinemaService} from "../service/cinema.service";
-import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
-import {IFilm} from "../model/film.model";
+import { CinemaService } from "../service/cinema.service";
+import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
+import { IFilm } from "../model/film.model";
 
 @Component({
   selector: 'app-cinema',
@@ -12,6 +12,7 @@ export class CinemaComponent implements OnInit {
 
   public form!: FormGroup;
   public films: IFilm[] = [];
+  public uri: string = 'https://image.tmdb.org/t/p/original/'
 
   constructor(
     private cinemaService: CinemaService,
@@ -25,12 +26,10 @@ export class CinemaComponent implements OnInit {
   }
 
   search() {
-    console.log('recherche form : ', this.form.get('recherche')?.value)
     this.cinemaService
       .getFilms(this.form.get('recherche')?.value, 1)
       .subscribe(data => {
         this.films = data.results
-        console.log(data)
         }
       )
   }
